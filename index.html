@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Clash Pro</title>
+    <link rel="shortcut icon" href="https://cdn2.vectorstock.com/i/1000x1000/33/36/neon-icon-of-purple-joystick-vector-21093336.jpg" type="image/x-icon">
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1e67654919.js" crossorigin="anonymous"></script>
+</head>  
+<body class="bg-[#010313] min-h-[100vh] bg-[url(images/background.png)] bg-no-repeat bg-center bg-top font-poppins">
+
+
+
+    <!-- home screen  -->
+    <section class="home text-white flex flex-col items-center min-h-[100vh] justify-center " id="home-screen">
+        <div class="flex flex-col text-center justify-center gap-4 items-center 
+        ">
+            <h1 class="text-9xl font-anton font-light">ALPHABET CLASH</h1>
+        <P>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</P>
+        <button class='btn btn-primary bg-white mt-7' id="play-now-btn" >Play Now</button>
+        </div>
+    </section>
+
+
+
+
+    <!-- playground Screen -->
+    <section class="playground font-poppins flex  flex-col items-center  min-h-[100vh] gap-16 justify-center hidden" id="playground">
+        <div class="artboard artboard-horizontal phone-6 border-[#010313ca] border-solid border-8 rounded-2xl bg-[#ffffffb3] " >
+            <div class="flex flex-col items-center h-full">
+                <div class="bg-[#010313ca] max-w-max py-1 px-3 -translate-y-2 rounded-xl">
+                    <h4 class="">Don't watch keyboard  while playing...</h4>
+                </div>
+               <div class="flex h-full  items-center ">
+                <h1 class="text-black text-9xl " id="display">Y</h1>
+               </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="flex justify-center gap-1 my-1 w-full">
+                <kbd class="kbd bg-white text-black w-10 h-10" id="q">q</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="w">w</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="e">e</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="r">r</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="t">t</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="y">y</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="u">u</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="i">i</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="o">o</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="p">p</kbd>
+              </div> 
+              <div class="flex justify-center gap-1 my-1 w-full">
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="a">a</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="s">s</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="d">d</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="f">f</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="g">g</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="h">h</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="j">j</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="k">k</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="l">l</kbd>
+              </div> 
+              <div class="flex justify-center gap-1 my-1 w-full">
+                <kbd class="kbd bg-white text-black w-10 h-10" id="z">z</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="x">x</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="c">c</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="v">v</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="b">b</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="n">n</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10" id="m">m</kbd>
+                <kbd class="kbd bg-white text-black w-10 h-10 " id="/">/</kbd>
+              </div>
+        </div>
+        <div class="flex justify-around w-full">
+           <button class="btn rounded-full px-9 bg-purple-800 text-white" id="health"> Life <i class="fa-solid fa-heart-circle-bolt"></i> <span id="life">3</span></button>
+           <button class="btn rounded-full px-9 bg-blue-900 text-white"> Score <img src="./images/money.svg" alt=""> <span id="score">0</span></button>
+
+        </div>
+
+    </section>
+
+    <section class="score flex justify-center items-center h-[100vh] hidden" id="scorePage" >
+        <div class="bg-[#ffffff33] max-w-max p-12 flex flex-col justify-center items-center rounded-xl bg-[url(images/Rectangle7.png)] bg-no-repeat bg-left gap-5 shadow-xl border-solid border-[1px] border-gray-500">
+            <h2 class="text-gray-300 text-4xl">Game Over!!</h2>
+            <h1 class="text-white text-7xl font-bold">Score :<span id="final-score"> 0 </span></h1>
+            <button class="btn bg-white text-black border-none hover:bg-purple-300" id="play-again">Play Again</button>
+            <p class="text-xl text-gray-300">Practice will make you pro</p>
+        </div>
+    </section>
+
+
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>
